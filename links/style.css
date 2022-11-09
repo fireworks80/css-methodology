@@ -1,0 +1,64 @@
+:root {
+  --height-header: 100px;
+  --height-footer: 50px;
+}
+
+body {
+  margin: 0;
+}
+
+.wrap {
+  display: grid;
+  grid-template-areas:
+    'head head head head'
+    'nav main main main'
+    'footer footer footer footer';
+}
+
+header {
+  grid-area: head;
+  height: var(--height-header);
+  background-color: dodgerblue;
+}
+
+nav {
+  grid-area: nav;
+  background-color: hotpink;
+}
+
+main {
+  grid-area: main;
+  min-height: calc(100vh - var(--height-header) - var(--height-footer));
+  background-color: yellow;
+}
+
+footer {
+  grid-area: footer;
+  min-height: var(--height-footer);
+  background-color: gray;
+}
+
+/* =============================== */
+/* menu */
+/* =============================== */
+.sidebar .menu {
+  list-style: none;
+  padding-left: 0;
+}
+.sidebar .menu li {
+  border-bottom: 1px dashed gray;
+}
+
+.sidebar .menu a {
+  display: block;
+  padding: 10px;
+}
+
+.sidebar .widget {
+  margin: 10px;
+  background-color: aqua;
+}
+
+.sidebar .widget .menu a {
+  color: #fff;
+}

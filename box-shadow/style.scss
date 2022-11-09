@@ -1,0 +1,51 @@
+// ===============================
+// css conf 2017
+// url: https://www.youtube.com/watch?v=WmVH85G59Lk
+// ===============================
+$colors: (
+  'o': transparent,
+  'r': red
+);
+
+$size: 20px;
+
+$pixel-art: (
+  heart: (
+    (o o r r o r r o o)
+    (o r r r r r r r o)
+    (o r r r r r r r o)
+    (o o r r r r r o o)
+    (o o o r r r o o o)
+    (o o o o r o o o o)
+  )
+);
+
+@function pixelize($metrix, $size) {
+  $sh: '';
+  $rows: length($metrix); 
+
+  @for $row from 1 through $rows {
+     $row-num: nth($metrix, $row);
+
+     @for $col from 1 through length($row-num) {
+        $dot: nth($row-num, $col);
+
+        $sh: $sh + ($size * $col) + ' ' +  ($size * $row) + ' ' + map-get($colors, $dot);
+
+        @if not ($col == length($row-num) and $row == $rows) {
+          $sh: $sh + ',';
+        } 
+     } // for
+  }
+
+  @return unquote($sh);
+}
+
+
+.pixel-heart::after {
+  position: absolute;
+  height: $size;
+  width: $size; 
+  content: '';
+  box-shadow: pixelize(map-get($pixel-art, 'heart'), $size);
+}

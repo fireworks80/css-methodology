@@ -1,0 +1,10 @@
+{
+  "name": "single-line",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build-grid-layout": "sass grid-layout/style.scss grid-layout/style.css --style=compressed",
+    "watch-box-shadow": "sass --watch box-shadow/style.scss box-shadow/style.css"
+  }
+}

@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrap {
+  display: grid;
+  grid-template-areas:
+    'header header header header'
+    'nav . main main'
+    'footer footer footer footer';
+
+  * {
+    height: 100px;
+  }
+}
+
+header {
+  grid-area: header;
+  background-color: lime;
+}
+
+nav {
+  grid-area: nav;
+  background-color: navy;
+}
+
+main {
+  grid-area: main;
+  background-color: dodgerblue;
+}
+
+footer {
+  grid-area: footer;
+  background-color: aliceblue;
+}
+// =======================
+// media query lv 5
+// https://www.w3.org/TR/mediaqueries-5/
+// =======================
+
+@media (width < 960px) {
+  .wrap {
+    grid-template-areas:
+      'nav nav nav nav'
+      'footer footer footer footer'
+      'header header main main';
+  }
+}
+@media (width < 720px) {
+  .wrap {
+    grid-template-areas:
+      'header'
+      'nav'
+      'main'
+      'footer';
+  }
+}

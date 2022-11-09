@@ -1,0 +1,9 @@
+.pixel-heart::after {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  content: "";
+  box-shadow: 20px 20px transparent,40px 20px transparent,60px 20px red,80px 20px red,100px 20px transparent,120px 20px red,140px 20px red,160px 20px transparent,180px 20px transparent,20px 40px transparent,40px 40px red,60px 40px red,80px 40px red,100px 40px red,120px 40px red,140px 40px red,160px 40px red,180px 40px transparent,20px 60px transparent,40px 60px red,60px 60px red,80px 60px red,100px 60px red,120px 60px red,140px 60px red,160px 60px red,180px 60px transparent,20px 80px transparent,40px 80px transparent,60px 80px red,80px 80px red,100px 80px red,120px 80px red,140px 80px red,160px 80px transparent,180px 80px transparent,20px 100px transparent,40px 100px transparent,60px 100px transparent,80px 100px red,100px 100px red,120px 100px red,140px 100px transparent,160px 100px transparent,180px 100px transparent,20px 120px transparent,40px 120px transparent,60px 120px transparent,80px 120px transparent,100px 120px red,120px 120px transparent,140px 120px transparent,160px 120px transparent,180px 120px transparent;
+}
+
+/*# sourceMappingURL=style.css.map */

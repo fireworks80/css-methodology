@@ -1,0 +1,39 @@
+Arguments: 
+  /opt/homebrew/Cellar/node/18.11.0/bin/node /opt/homebrew/bin/yarn add -D sass
+
+PATH: 
+  /opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/opt/homebrew/bin:/opt/homebrew/sbin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  18.11.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/miracle/Desktop/css-methodology/single-line/package.json: Unexpected string in JSON at position 92
+      at JSON.parse (<anonymous>)
+      at /opt/homebrew/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /opt/homebrew/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "single-line",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+    "scripts": {
+      "watch": "sass --watch style.scss style.css"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
