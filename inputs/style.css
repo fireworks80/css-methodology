@@ -1,0 +1,60 @@
+/* ================================= */
+/* @component check-radio */
+/* checkbox, radio common */
+/* ================================= */
+.check-radio {
+  position: relative;
+}
+
+.check-radio input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.check-radio__label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+.check-radio__label::before,
+.check-radio__label::after {
+  content: '';
+}
+
+.check-radio__label::before {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+}
+
+.check-radio__label::after {
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+}
+
+.check-radio__txt {
+  margin-left: 10px;
+}
+
+/* active */
+.check-radio :checked + .check-radio__label::after {
+  background-color: dodgerblue;
+}
+
+/* 
+  radio
+*/
+.c-radio::before,
+.c-radio::after {
+  border-radius: 50%;
+}
