@@ -51,9 +51,7 @@
   background-color: dodgerblue;
 }
 
-/* 
-  radio
-*/
+/* radio */
 .c-radio::before,
 .c-radio::after {
   border-radius: 50%;
